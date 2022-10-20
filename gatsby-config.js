@@ -7,7 +7,13 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
  */
 module.exports = {
   siteMetadata: {
+    siteTitle: `Cara`,
     siteTitleAlt: `Jeandre's Portfolio`,
+    siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
+    siteUrl: `https://cara.lekoarts.de`,
+    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+    siteImage: `/banner.jpg`,
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
@@ -27,14 +33,9 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `static\favicon-32x32.png`,
-            sizes: `32x32`,
-            type: `image/png`,
-          },
-          {
-            src: `static\favicon-16x16.png`,
+            src: `static\favicon.ico`,
             sizes: `16x16`,
-            type: `image/png`,
+            type: `image/ico`,
           },
         ],
       },
