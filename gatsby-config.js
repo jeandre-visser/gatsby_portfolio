@@ -7,16 +7,7 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
  */
 module.exports = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.js
-    siteTitle: `My Portfolio`,
     siteTitleAlt: `Jeandre's Portfolio`,
-    siteHeadline: `Jeandre's Portfolio`,
-    siteUrl: `https://cara.lekoarts.de`,
-    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-    siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
   },
   plugins: [
     {
@@ -32,10 +23,20 @@ module.exports = {
         description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
         start_url: `/`,
         background_color: `#141821`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#f6ad55`,
+        theme_color: `#f6ad55`,
         display: `standalone`,
+        icons: [
+          {
+            src: `static\favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+          {
+            src: `static\favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     shouldAnalyseBundle && {
